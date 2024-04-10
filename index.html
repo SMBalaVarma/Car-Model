@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Configurator</title>
+  <link rel="icon" href="./static/repair-icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="progress-bar-container">
+    <label for="progress-bar" class="progress-bar">Started loading...</label>
+    <progress id="progress-bar" value="0"></progress>
+    <br>
+    <p> You can modify the car and download the image. </p>
+  </div>
+
+  <button id="musicToggleBtn" onclick="toggleMusic()">
+    <img id="musicIcon" src="play-icon.png" alt="Play">
+  </button>
+  <audio id="backgroundMusic" loop>
+    <source src="static/bgm.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="carColor">
+    <button id="bodyColor" class="btn-grad" onclick="showColorBar('bodybar')">Body Color</button>
+    <button id="rimColor" class="btn-grad" onclick="showColorBar('rimbar')">Rim Color</button>
+  </div>
+  <div id="bodybar" style="display: none;">
+    <button id="gra" class="color-button selected" style="background-color: #ff0000;" onclick="setColor(event)"></button>
+    <button id="whi" class="color-button" style="background-color: #ffffff;" onclick="setColor(event)"></button>
+    <button id="re" class="color-button" style="background-color: #026100;" onclick="setColor(event)"></button>
+    <button id="ble" class="color-button" style="background-color: #060cac;" onclick="setColor(event)"></button>
+    <button id="pple" class="color-button" style="background-color: #000000;" onclick="setColor(event)"></button>
+  </div>
+  <div id="rimbar" style="display: none;">
+    <button id="gr" class="color-button selected" style="background-color: #ffffff;" onclick="setColor(event)"></button>
+    <button id="whe" class="color-button" style="background-color: #000000;" onclick="setColor(event)"></button>
+    <button id="re" class="color-button" style="background-color: #9f2d2d;" onclick="setColor(event)"></button>
+  </div>
+  
+  <div class="model-credit">
+    McLaren P1 model by <a href="https://sketchfab.com/david3dart">https://sketchfab.com/david3dart</a> 
+  </div>
+  <canvas class="webgl"></canvas>
+  <script type="importmap">
+            {
+              "imports": {
+                "three": "https://unpkg.com/three@0.161.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.161.0/examples/jsm/"
+              }
+            }
+    </script>
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>

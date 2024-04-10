@@ -1,0 +1,5 @@
+*basic three js setup
+
+*download required files
+
+*

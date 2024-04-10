@@ -1,0 +1,159 @@
+*{
+ padding: 0;
+  margin : 0;
+  scrollbar-width: none;
+  }
+  
+  #bodybar , #rimbar {
+    position: absolute;
+    top: 76%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: transparent;
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 12px;
+  }
+  
+  #render-window {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .color-button {
+    border: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+  }
+  
+  .color-button.selected {
+    outline: 3px solid white;
+  }
+
+  #carColor {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: transparent;
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 18px;
+  }
+
+           
+  .btn-grad {
+    background-image: linear-gradient(to right, #200122 0%, #6f0000  51%, #200122  100%);
+    /* margin: 10px; */
+    padding: 15px 40px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #880000;
+    border-radius: 10px;
+    display: block;
+  }
+
+  .btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+
+
+ 
+  /* canvas {
+    position: absolute;
+  } */
+
+  .progress-bar-container {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(1, 1, 1, 0.9);
+  }
+  .progress-bar-container label{
+    margin-bottom: 10px;
+  }
+  .progress-bar-container p{
+    font-size: 1rem;
+  }
+
+  #progress-bar {
+    width: 70%;
+    height: 6px;
+    background: #ffffff;
+    transition: 5ms;
+    color: white;
+  }
+
+  progress[value]::-webkit-progress-value {
+    background-image:
+      -webkit-linear-gradient(-45deg,
+        transparent 33%, rgba(0, 0, 0, .1) 33%,
+        rgba(0, 0, 0, .1) 66%, transparent 66%),
+      -webkit-linear-gradient(top,
+        rgba(255, 255, 255, .25),
+        rgba(0, 0, 0, .25)),
+      -webkit-linear-gradient(left, rgb(28, 170, 217), rgb(189, 51, 51));
+
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+  }
+
+  .model-credit{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    font-size: 0.8rem;
+    color: white;
+    z-index: 10;
+    bottom: 0;
+    right: 0;
+  }
+  .model-credit a{
+    color: rgb(217, 217, 217);
+  }
+
+  #musicToggleBtn {
+    background-image: linear-gradient(to right, #ffffff 0%, #ffffff  51%, #200122  100%);
+    /* margin: 10px; */
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #880000;
+    border-radius: 100%;
+    display: block;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    left: 97%;
+  }
+  
+  #musicIcon {
+    width: 30px;
+    height: 30px;
+  }
